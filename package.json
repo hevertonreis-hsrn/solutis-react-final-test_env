@@ -1,0 +1,29 @@
+{
+  "name": "solutis-react-final-test_env",
+  "version": "1.0.0",
+  "description": "Ambiente de Testes para uma Aplicação React",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx cypress open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hevertonreis-hsrn/solutis-react-final-test_env.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hevertonreis-hsrn/solutis-react-final-test_env/issues"
+  },
+  "homepage": "https://github.com/hevertonreis-hsrn/solutis-react-final-test_env#readme",
+  "devDependencies": {
+    "cypress": "^6.2.1",
+    "cypress-cucumber-preprocessor": "^4.0.0",
+    "cypress-xpath": "^1.6.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "cypress/support/steps"
+  }
+}
