@@ -12,14 +12,20 @@ class FlightsListPage{
     }
     detailFlightId(id){
         cy.get(fligthElements.detailsBtn()+id)
-            click({force:true})
+            .click({force:true})
     }
     editFlightId(id){
         cy.get(fligthElements.editBtn()+id)
-            click({force:true})
+            .click({force:true})
     }
-    getDeleteBtn(){
-        return cy.get(fligthElements.deleteBtn())
+    getDeleteBtnId(id){
+        cy.wait(1000)
+            .get('th')
+            .contains(id)
+            .siblings('.d-flex')
+            .children()
+            .last()
+            .click()
     }
     goToPage(number){
         cy.get(fligthElements.pageBtn()).contains(number)
