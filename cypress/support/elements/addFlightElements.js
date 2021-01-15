@@ -15,6 +15,9 @@ class AddFligthElements{
     departureDate = () => {return ':nth-child(1) > :nth-child(5) > #flight-date'}
     departureTime = () => {return ':nth-child(1) > :nth-child(6) > #flight-time'}
     departureCheckout = () => {return ':nth-child(1) > :nth-child(7) > #flight-checkout'}
+    arrival = () => {return '[placeholder="Arrival"]'}
+    arrivalAirportSelect = () => {return '#arrivalAirport'}
+    arrivalAirlineSelect = () => {return '#arrivalAirline'}
     addTransitBtn = () => {return '#connection-manager-form > .btn'}
     submitBtn = () => {return '.btn-primary'}
 

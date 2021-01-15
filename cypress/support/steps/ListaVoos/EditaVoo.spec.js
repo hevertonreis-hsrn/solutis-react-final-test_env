@@ -8,7 +8,8 @@ When ('tento editar voo de id {string}', id => {
 })
 
 And ('modifico o horário saída para {string}', horario => {
-    addFlightPage.setDepartureTime(horario)
+    addFlightPage.setArrivalTime(horario)
+    addFlightPage.setArrivalCheckout('12:30')
 })
 
 And ('envio as informações', () => {

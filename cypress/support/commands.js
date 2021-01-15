@@ -20,6 +20,7 @@
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
 Cypress.Commands.add('typeCheck', (sel, input) => {
+    cy.get(sel).clear() //limpa o campo antes de tentar digitar
     if(input === ""){
         cy.get(sel)
         .clear()

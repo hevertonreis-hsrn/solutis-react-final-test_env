@@ -23,9 +23,20 @@ class FlightsListPage{
             .get('th')
             .contains(id)
             .siblings('.d-flex')
-            .children()
-            .last()
+            .children(fligthElements.deleteBtn())
             .click()
+    }
+    checkFlightId(id){
+        cy.wait(1000)
+            .get('th')
+            .contains(id)
+            .siblings()
+            .first()
+            .children()
+            .check({force:true})
+    }
+    clickDeleteChecked(){
+        cy.get(fligthElements.deleteCheckedBtn()).click()
     }
     goToPage(number){
         cy.get(fligthElements.pageBtn()).contains(number)
