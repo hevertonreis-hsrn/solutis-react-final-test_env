@@ -25,5 +25,5 @@ When('mudo a quantidade de voos por página', () => {
 
 Then('a quantidade de voos por página é modificada', () => {
     cy.get('tbody > tr')
-        .should('have.length', 25)
+        .should('have.length.gt', 10)
 })
