@@ -1,21 +1,16 @@
-import AddHotelForm from '../../elements/AddHotelForm'
+import AddHotelClass from '../../pageObjects/AddHotelClass'
+const AddHotel = new AddHotelClass
 
 When('iniciar a adição de um novo hotel', () => {
 	cy.get('.btn-success').click()
 })
 
 And('preencher todas as informações', () => {
-    cy.fixture('hotelInfo')
-    .then(info => {
-        Object.keys(info).forEach(item => {
-            cy.typeCheck(`#${item}`,info[item])
-        })
-        cy.get(AddHotelForm.status).click()
-    })
+    AddHotel.infoType('hotelInfo','valid')
 })
 
-And('submeter a adição do novo Hotel', () => {
-	cy.get(AddHotelForm.sendBtn).click()
+And('submeter a adição do novo hotel', () => {
+	AddHotel.formSend()
 })
 
 And('exibir todos os resultados', () => {
@@ -23,10 +18,9 @@ And('exibir todos os resultados', () => {
 })
 
 Then('o hotel é adicionado à Lista', () => {
-    cy.wait(2000)
-   /* cy.fixture('hotelInfo')
+    cy.fixture('hotelInfo')
     .then( info => {
         cy.get('tbody > tr')
-        .should('contain',info.nameAddHotel)
-    })*/
+        .should('contain',info[0].nameAddHotel)
+    })
 })

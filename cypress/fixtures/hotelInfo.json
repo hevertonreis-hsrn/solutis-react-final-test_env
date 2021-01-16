@@ -1,9 +1,42 @@
-{
-    "urlAddHotel" : "https://cf.bstatic.com/images/hotel/max1024x768/174/174544724.jpg",
-    "nameAddHotel": "Hotel Fasano",
-    "starAddHotel": 4,
-    "ownedByAddHotel": "Fasano Group",
-    "locationAddHotel": "Praça Castro Alves, 5 - Centro, Salvador - BA, 40020-160",
-    "orderAddHotel": 10,
-    "discountAddHotel": 10
-}
+[
+    {
+        "type": "valid",
+        "urlAddHotel" : "https://cf.bstatic.com/images/hotel/max1024x768/174/174544724.jpg",
+        "nameAddHotel": "Hotel Fasano",
+        "starAddHotel": 4,
+        "ownedByAddHotel": "Fasano Group",
+        "locationAddHotel": "Praça Castro Alves, 5 - Centro, Salvador - BA, 40020-160",
+        "orderAddHotel": 10,
+        "discountAddHotel": 10
+    },
+    {
+        "type": "empty",
+        "urlAddHotel" : "",
+        "nameAddHotel": "",
+        "starAddHotel": "",
+        "ownedByAddHotel": "",
+        "locationAddHotel": "",
+        "orderAddHotel": "",
+        "discountAddHotel": ""
+    },
+    {
+        "type": "invalid",
+        "urlAddHotel" : "isto NÃO É uma url",
+        "nameAddHotel": "!!!!!!!!!!!!!!!!!!!!!Este texto tem mais de 50 caracteres!!!!!!!!!!!!!!!!!!!!!!",
+        "starAddHotel": 7,
+        "ownedByAddHotel": "!!!!!!!!!!!!!!!!!!!!!Este texto tem mais de 50 caracteres!!!!!!!!!!!!!!!!!!!!!!",
+        "locationAddHotel": "!!!!!!!!!!!!!!!!!!!!!Este texto tem mais de 50 caracteres!!!!!!!!!!!!!!!!!!!!!!",
+        "orderAddHotel": -1,
+        "discountAddHotel": -1
+    },
+    {
+        "type": "edit",
+        "urlhotelInfo" : "https://media-cdn.tripadvisor.com/media/photo-s/13/e0/32/6c/bahia-othon-palace.jpg",
+        "namehotelInfo": "Bahia Otton Palace",
+        "starhotelInfo": 3,
+        "ownedByhotelInfo": "Grupo Otton",
+        "locationhotelInfo": "Av. Oceânica, 2294 - Ondina, Salvador - BA, 40170-010",
+        "orderhotelInfo": 10,
+        "discounthotelInfo": 10
+    }
+]

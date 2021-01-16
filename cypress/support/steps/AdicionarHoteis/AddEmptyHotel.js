@@ -1,13 +1,11 @@
+import AddHotelClass from '../../pageObjects/AddHotelClass'
+const AddHotel = new AddHotelClass
 
 And('e não preencher todas as informações', () => {
-	cy.fixture('emptyHotelInfo')
-    .then(info => {
-        Object.keys(info).forEach(item => {
-            cy.typeCheck(`#${item}`,info[item])
-        })
-    })
+    AddHotel.infoType('hotelInfo','empty')
 })
 
 Then('o envio não é permitido', () => {
-	
+    cy.url()
+    .should('be.equal','http://localhost:3000/hotels/create')
 })
