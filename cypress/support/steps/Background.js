@@ -7,5 +7,6 @@ And('o acesso à {string}', (section) => {
         .then(secList => {
             console.log(secList)
             cy.visit(secList[section])
+            cy.wait(1000)
         })
 })
