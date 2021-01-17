@@ -23,8 +23,8 @@ class addFlightPage{
     setDepartureDate(data){
         cy.typeCheck(addFlightElements.departureDate(), data)
     }
-    setDepartureTime(time){
-        cy.typeCheck(addFlightElements.departureTime(), time)
+    setDepartureCheckin(time){
+        cy.typeCheck(addFlightElements.departureCheckin(), time)
     }
     setDepartureCheckout(checkout){
         cy.typeCheck(addFlightElements.departureCheckout(), checkout)
@@ -53,7 +53,7 @@ class addFlightPage{
             .children()
             .type(data, {force: true})
     }
-    setArrivalTime(time){
+    setArrivalCheckin(time){
         cy.get(addFlightElements.arrival())
             .parent()
             .siblings()

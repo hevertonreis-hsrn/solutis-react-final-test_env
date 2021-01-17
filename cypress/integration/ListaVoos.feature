@@ -35,15 +35,14 @@ Feature: Lista de Voos
             | 10  |
 
     #É possível editar voo
-    
     Scenario Outline: Editando voo específico
         When tento editar voo de id "<id>"
-        And modifico o horário saída para "<horario>"
+        And modifico o horário do checkin de saída para "<horario>"
         And envio as informações
-        Then o horário de saída do voo "<id>" é modificada para "<horario>"
+        Then o horário do checkin de saída do voo "<id>" é modificada para "<horario>"
         Examples:
             | id  | horario | 
-            | 2   | 12:00   |
+            | 6   | 12:00   |
 
     #É possível deletar voo
 

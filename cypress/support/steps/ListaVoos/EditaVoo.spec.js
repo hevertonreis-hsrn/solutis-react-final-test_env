@@ -7,17 +7,16 @@ When ('tento editar voo de id {string}', id => {
     fligthsPage.editFlightId(id)
 })
 
-And ('modifico o horário saída para {string}', horario => {
-    addFlightPage.setArrivalTime(horario)
-    addFlightPage.setArrivalCheckout('12:30')
+And ('modifico o horário do checkin de saída para {string}', horario => {
+    addFlightPage.setDepartureCheckin(horario)
 })
 
 And ('envio as informações', () => {
     addFlightPage.submit()
 })
 
-Then ('o horário de saída do voo {string} é modificada para {string}', (id, horario) => {
-    cy.get(`:nth-child(${id}) > :nth-child(9)`)
+Then ('o horário do checkin de saída do voo {string} é modificada para {string}', (id, horario) => {
+    cy.get(`tbody > :nth-child(${id}) > :nth-child(10)`)
         .invoke('text')
         .should('eq', horario)
 })

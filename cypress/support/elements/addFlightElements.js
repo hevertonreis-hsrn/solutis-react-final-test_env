@@ -13,7 +13,7 @@ class AddFligthElements{
     departureAirportSelect = () => {return '#departureAirport'}
     departureAirlineSelect = () => {return '#departureAirline'}
     departureDate = () => {return ':nth-child(1) > :nth-child(5) > #flight-date'}
-    departureTime = () => {return ':nth-child(1) > :nth-child(6) > #flight-time'}
+    departureCheckin = () => {return ':nth-child(1) > :nth-child(6) > #flight-checkin'}
     departureCheckout = () => {return ':nth-child(1) > :nth-child(7) > #flight-checkout'}
     arrival = () => {return '[placeholder="Arrival"]'}
     arrivalAirportSelect = () => {return '#arrivalAirport'}
