@@ -2,11 +2,11 @@ import HotelExtrasHomePO from '../../pageobjects/HotelExtrasHomePO'
 
 const hotelExtrasHome = new HotelExtrasHomePO
 
-When('acesso a tradução de um extra', () => {
+And('acesso a tradução de um extra', () => {
 	hotelExtrasHome.traducao()
 });
 
-And('traduzo o nome em vietnamita do extra usando {string}', (traducaoVietnamita) => {
+When('traduzo o nome em vietnamita do extra usando {string}', (traducaoVietnamita) => {
 	hotelExtrasHome.editarTraducaoVietnamita(traducaoVietnamita)
 });
 

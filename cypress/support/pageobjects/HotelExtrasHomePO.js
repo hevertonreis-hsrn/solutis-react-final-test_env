@@ -1,16 +1,11 @@
 import HotelExtrasHomeElements from '../elements/HotelExtrasHomeElements'
 
-const HotelExtras = new HotelExtrasElements
+const HotelExtras = new HotelExtrasHomeElements
 
-class HotelExtrasPO{
+class HotelExtrasHomePO{
 
     selecionarTodos(){
         cy.get(HotelExtras.selecionarTodos()).click()
-        cy.wait(1000)
-    }
-
-    deletarSelecionados(){
-        cy.get(HotelExtras.deletarSelecionados()).click()
         cy.wait(1000)
     }
 
@@ -46,8 +41,17 @@ class HotelExtrasPO{
         cy.wait(1000)
     }
 
-    deletar(){
-        cy.get(HotelExtras.deletar()).click()
+    conferirEdicao(string){
+        cy.get(HotelExtras.conferirEdicao()).should('contain', string)
+    }
+
+    excluir(){
+        cy.get(HotelExtras.excluir()).click()
+        cy.wait(1000)
+    }
+
+    excluirSelecionados(){
+        cy.get(HotelExtras.excluirSelecionados()).click({ force: true })
         cy.wait(1000)
     }
     

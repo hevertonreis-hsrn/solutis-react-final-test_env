@@ -13,10 +13,12 @@ class HotelExtrasHomeElements{
     lupaNameBox = () => { return '[placeholder="Name*:  Royal Hotel"]'}
     lupaNameBox = () => { return '[placeholder="Name*:  Royal Hotel"]'}
     
-    editar = () => { return '.btn btn-warning btn-sm mx-1'}
-    deletar = () => { return '.btn btn-danger btn-sm mx-1 mt-0'}
-    selecionarTodos = () => { return '//*[@id="root"]/div/div/div/table/thead/tr/th[1]/div/input'}
-    deletarSelecionados = () => { return '.btn btn-danger'}
+    editar = () => { return '#root > div.container.mt-5 > div > div.card-body > div > div > table > tbody > tr:nth-child(5) > td.modify-buttons > div > a.btn.btn-warning.btn-sm.mx-1'}
+    conferirEdicao = () => { return '.col-md-12'}
+
+    excluir = () => { return '#root > div.container.mt-5 > div > div.card-body > div > div > table > tbody > tr:nth-child(6) > td.modify-buttons > div > button'}
+    selecionarTodos = () => { return '#selectAll'}
+    excluirSelecionados = () => { return '#root > div.container.mt-5 > div > div.card-body > div > div > div.border.border-muted.rounded.d-flex.justify-content-between.mb-4.bg-light.p-3 > button'}
 }
 
 export default HotelExtrasHomeElements

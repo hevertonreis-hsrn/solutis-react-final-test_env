@@ -27,5 +27,5 @@ Then('confirmo a operação e volto ao menu', () => {
 });
 
 And('o hotel com o preço {string} é adicionado a lista', (preco) => {
-	hotelExtrasAdd.elementosTabela(preco)
+	hotelExtrasAdd.conferirAdicao(preco)
 });

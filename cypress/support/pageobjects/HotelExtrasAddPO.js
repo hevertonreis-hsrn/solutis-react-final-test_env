@@ -9,19 +9,19 @@ class HotelExtrasAddPO{
     }
 
     adicionarImagem(imagem){
-        cy.get(HotelExtrasAdd.imagem()).type(imagem)
+        cy.get(HotelExtrasAdd.imagem()).clear().type(imagem)
     }
 
     adicionarNome(nome){
-        cy.get(HotelExtrasAdd.nome()).type(nome)
+        cy.get(HotelExtrasAdd.nome()).clear().type(nome)
     }
 
     adicionarStatus(status){
-        cy.get(HotelExtrasAdd.status()).type(status)
+        cy.get(HotelExtrasAdd.status()).select(status)
     }
 
     adicionarPreco(preco){
-        cy.get(HotelExtrasAdd.preco()).type(preco)
+        cy.get(HotelExtrasAdd.preco()).clear().type(preco)
     }
 
     saveAndReturn(){
@@ -36,8 +36,8 @@ class HotelExtrasAddPO{
         cy.get(HotelExtrasAdd.return()).click()
     }
 
-    elementosTabela(string){
-        cy.get(HotelExtrasAdd.elementosTabela()).should('contain', string)
+    conferirAdicao(string){
+        cy.get(HotelExtrasAdd.conferirAdicao()).should('contain', string)
     }
 
     invalidInput(){
