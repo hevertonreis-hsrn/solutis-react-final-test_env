@@ -27,7 +27,7 @@ class HotelExtrasHomePO{
     }
 
     updateTraducao(){
-        cy.get(HotelExtras.updateTraducao()).click()
+        cy.get(HotelExtras.updateTraducao()).click({force:true})
         cy.wait(1000)
     }
   

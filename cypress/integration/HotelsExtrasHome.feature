@@ -7,19 +7,20 @@ Feature: Hotel Extras Home Page
     Background: acesso ao Sitema
         Given o acesso ao sistema
         And o acesso à "Hotel extra"
-        
+
+    @focus
     #RN01: É possível usar a funcionalidade Traduzir Extra
     Scenario Outline: Traduzir o nome de um extra
         And acesso a tradução de um extra
         When traduzo o nome em vietnamita do extra usando "<vietnamita>"
         And traduzo o nome em espanhol do extra usando "<espanhol>"
         And traduzo o nome em alemão do extra usando "<alemao>"
-        Then confirmo a operação
+        Then confirmo a operação de traduzir
         Examples:
             | vietnamita          | espanhol   | alemao      |
             | khách sạn Hoàng Gia | Hotel real | Royal Hotel |
 
-    @focus
+    
     #RN02: É possível usar a funcionalidade Visualizar Extra
     Scenario: Visualizar um extra
         When acesso a visualização do extra

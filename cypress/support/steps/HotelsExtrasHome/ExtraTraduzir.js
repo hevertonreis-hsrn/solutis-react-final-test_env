@@ -18,6 +18,6 @@ And('traduzo o nome em alemão do extra usando {string}', (traducaoAlemao) => {
 	hotelExtrasHome.editarTraducaoAlemao(traducaoAlemao)
 });
 
-Then('confirmo a operação', () => {
+Then('confirmo a operação de traduzir', () => {
 	hotelExtrasHome.updateTraducao()
 });
