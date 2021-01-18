@@ -8,8 +8,7 @@ Feature: Lista de Hotéis
         Given o acesso ao sistema
         And o acesso à "Hotels"
 
-    #RN01: É possível adicionar um novo hotel à Lista
-    @focus    
+    #RN01: É possível adicionar um novo hotel à Lista   
     Scenario: Adicionando um Hotel à Lista
         When iniciar a adição de um novo hotel
         And preencher todas as informações
