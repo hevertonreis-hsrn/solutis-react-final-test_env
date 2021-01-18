@@ -3,14 +3,13 @@ Feature: Hotel Extras Home Page
     COMO administrador do site
     DESEJO ter controle sobre os hotéis
     PARA organizar minha tabela
-
     
     Background: acesso ao Sitema
         Given o acesso ao sistema
         And o acesso à "Hotel extra"
-
-    #RN: É possivel atribuir uma tradução ao nome do extra
-    Scenario Outline: Usando a funcionalidade Translate
+        
+    #RN01: É possível usar a funcionalidade Traduzir Extra
+    Scenario Outline: Traduzir o nome de um extra
         And acesso a tradução de um extra
         When traduzo o nome em vietnamita do extra usando "<vietnamita>"
         And traduzo o nome em espanhol do extra usando "<espanhol>"
@@ -20,16 +19,16 @@ Feature: Hotel Extras Home Page
             | vietnamita          | espanhol   | alemao      |
             | khách sạn Hoàng Gia | Hotel real | Royal Hotel |
 
-    
-    Scenario Outline: Usando a funcionalidade Visualizar
+    #RN02: É possível usar a funcionalidade Visualizar Extra
+    Scenario Outline: Visualizar um extra
         And acesso a visualização do extra
         Then confiro se as informações "<nome>", "<status>" e "<preco>"
         Examples:
             | nome        | status | preco |
             | Royal Hotel | Yes    | 1200  |
 
-    
-    Scenario Outline: Usando a funcionalidade Editar
+    #RN03: É possível usar a funcionalidade Editar Extra
+    Scenario Outline: Editar um extra
         And acesso a edição do extra
         When altero as informações "<imagem>", "<nome>", "<status>" e "<preco>"
         Then cofirmo as mudanças e volto ao menu
@@ -38,17 +37,17 @@ Feature: Hotel Extras Home Page
             | imagem                                                                                        | nome         | status | preco    |
             | https://cdn.britannica.com/85/171185-050-135771D4/Burj-Khalifa-Dubai-United-Arab-Emirates.jpg | Burj Khalifa | No     | 9999     |
 
-    @focus
-    Scenario: Usando a funcionalidade Excluir Individual
+    #RN04: É possível usar a funcionalidade Excluir Extra
+    Scenario: Excluir um extra individualmente
         When tento excluir um extra
         Then confirmo a operação
         And veirifico se o extra foi realmente excluido
 
-
-    Scenario: Usando a funcionalidade Excluir Selecionados
+    #RN05: É possível usar a funcionalidade Excluir tods os Extras selecionados
+    Scenario: Excluir todos os extras selecionados
         When seleciono todos os extras
-        Then tento excluir usando Delete Selected
-        And confirmo a operação
+        And tento excluir usando Delete Selected
+        Then confirmo a operação
         And verifico se o extra foi realmente excluido
     
            

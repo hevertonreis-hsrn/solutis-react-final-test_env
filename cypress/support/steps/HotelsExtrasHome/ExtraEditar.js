@@ -1,7 +1,9 @@
 import HotelExtrasHomePO from '../../pageobjects/HotelExtrasHomePO'
+
 import HotelExtrasAddPO from '../../pageobjects/HotelExtrasAddPO'
 
 const hotelExtrasHomePO = new HotelExtrasHomePO
+
 const hotelExtrasAddPO = new HotelExtrasAddPO
 
 And('acesso a edição do extra', () => {
