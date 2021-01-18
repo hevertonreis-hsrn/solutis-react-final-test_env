@@ -15,15 +15,15 @@ class HotelExtrasHomePO{
     }
 
     editarTraducaoVietnamita(string){
-        cy.xpath(HotelExtras.editarTraducaoVietnamita()).clear().type(string)
+        cy.get(HotelExtras.editarTraducaoVietnamita()).clear().type(string)
     }
 
     editarTraducaoEspanhol(string){
-        cy.xpath(HotelExtras.editarTraducaoEspanhol()).clear().type(string)
+        cy.get(HotelExtras.editarTraducaoEspanhol()).clear().type(string)
     }
 
     editarTraducaoAlemao(string){
-        cy.xpath(HotelExtras.editarTraducaoAlemao()).clear().type(string)
+        cy.get(HotelExtras.editarTraducaoAlemao()).clear().type(string)
     }
 
     updateTraducao(){
@@ -31,9 +31,12 @@ class HotelExtrasHomePO{
         cy.wait(1000)
     }
   
-    lupa(){
-        cy.get(HotelExtras.lupa()).click()
-        cy.wait(1000)
+    visualizacao(){
+        cy.get(HotelExtras.visualizacao()).click()
+    }
+
+    verificarVisualizacao(){
+        cy.url().should('contain', 1)
     }
 
     editar(){
@@ -41,8 +44,8 @@ class HotelExtrasHomePO{
         cy.wait(1000)
     }
 
-    conferirEdicao(string){
-        cy.get(HotelExtras.conferirEdicao()).should('contain', string)
+    verificarEdicao(string){
+        cy.get(HotelExtras.verificarEdicao()).should('contain', string)
     }
 
     excluir(){

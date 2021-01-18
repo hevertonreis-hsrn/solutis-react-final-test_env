@@ -22,7 +22,7 @@ Then('cofirmo as mudanças e volto ao menu', () =>{
 }) 
 
 And('confiro se as alterações {string}, {string} e {string} foram relizadas', (nome,status,preco) => {
-    hotelExtrasHomePO.conferirEdicao(nome)
-    hotelExtrasHomePO.conferirEdicao(status)
-    hotelExtrasHomePO.conferirEdicao(preco)
+    hotelExtrasHomePO.verificarEdicao(nome)
+    hotelExtrasHomePO.verificarEdicao(status)
+    hotelExtrasHomePO.verificarEdicao(preco)
 });

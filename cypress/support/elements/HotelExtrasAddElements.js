@@ -1,4 +1,5 @@
 class HotelExtrasAddElements{
+    //Elements da criação
     adiconarExtra = () => { return '.btn-success'}
     saveAndReturn = () => { return '.btn-primary'}
     saveAndNew = () => { return '.btn-outline-secondary'}

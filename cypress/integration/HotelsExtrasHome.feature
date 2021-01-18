@@ -19,13 +19,11 @@ Feature: Hotel Extras Home Page
             | vietnamita          | espanhol   | alemao      |
             | khách sạn Hoàng Gia | Hotel real | Royal Hotel |
 
+    @focus
     #RN02: É possível usar a funcionalidade Visualizar Extra
-    Scenario Outline: Visualizar um extra
-        And acesso a visualização do extra
-        Then confiro se as informações "<nome>", "<status>" e "<preco>"
-        Examples:
-            | nome        | status | preco |
-            | Royal Hotel | Yes    | 1200  |
+    Scenario: Visualizar um extra
+        When acesso a visualização do extra
+        Then consigo ver o extra com mais detalhes
 
     #RN03: É possível usar a funcionalidade Editar Extra
     Scenario Outline: Editar um extra
