@@ -5,7 +5,8 @@ And('e não preencher todas as informações', () => {
     AddHotel.infoType('hotelInfo','empty')
 })
 
-Then('o envio não é permitido', () => {
-    cy.url()
-    .should('be.equal','http://localhost:3000/hotels/create')
+Then('o envio não deve ser permitido', () => {
+    cy.wait('@formIntercept').should(({request,response}) => {
+        expect(request.body.name).to.not.be.empty
+    })
 })

@@ -10,7 +10,8 @@ And('preencher todas as informações', () => {
 })
 
 And('submeter a adição do novo hotel', () => {
-	AddHotel.formSend()
+    cy.intercept('POST', '**/hotels').as('formIntercept')
+    AddHotel.formSend()
 })
 
 And('exibir todos os resultados', () => {

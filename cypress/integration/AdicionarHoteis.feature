@@ -17,12 +17,12 @@ Feature: Lista de Hotéis
         Then o hotel é adicionado à Lista
 
     #RN02: Não deve ser possível adicionar um elemento vazio à lista
-    #RN02.1: Campos Nome do Hotel, Localização e Imagem são obrigatórios   
+    #RN02.1: Campos Nome do Hotel, Localização e Imagem são obrigatórios  
     Scenario: Adicionando um Hotel à Lista sem fornecer todas as informações
         When iniciar a adição de um novo hotel
         And e não preencher todas as informações
         And submeter a adição do novo hotel
-        Then o envio não é permitido
+        Then o envio não deve ser permitido
     
     #RN03: Todos os campos devem possuir validações
     #RN03.1: Campo Imagem só pode admitir URLs
