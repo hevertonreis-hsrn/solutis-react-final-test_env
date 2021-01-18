@@ -13,12 +13,13 @@ Then('tento excluir usando Delete Selected', () => {
 
 
 And('confirmo a operação', () => {
-    cy.on('window:confirm', (string) => {
-        expect(string).to.equal('Do you really want to delete all selected items ?')
+    cy.on('window:alert', (mensagem) => {
+        expect(mensagem).to.equal('Do you really want to delete all selected items ?');
     })
+    cy.on('window:confirm', () => true);
 });
 
 
 And('verifico se o extra foi realmente excluido', () => {
-	return true;
+	hotelExtrasHomePO.verificarExcluirTodos()
 });

@@ -36,15 +36,15 @@ Feature: Hotel Extras Home Page
         And confiro se as alterações "<nome>", "<status>" e "<preco>" foram relizadas
         Examples:
             | imagem                                                                                        | nome         | status | preco    |
-            | https://cdn.britannica.com/85/171185-050-135771D4/Burj-Khalifa-Dubai-United-Arab-Emirates.jpg | Burj Khalifa | No     | 9999 |
+            | https://cdn.britannica.com/85/171185-050-135771D4/Burj-Khalifa-Dubai-United-Arab-Emirates.jpg | Burj Khalifa | No     | 9999     |
 
-
-    Scenario: Usando a funcionalidade Excluir
-        When acesso a visualização do extra
-        Then tento excluir um extra
+    @focus
+    Scenario: Usando a funcionalidade Excluir Individual
+        When tento excluir um extra
+        Then confirmo a operação
         And veirifico se o extra foi realmente excluido
 
-    @RodarTesteExcluirSelecionado
+
     Scenario: Usando a funcionalidade Excluir Selecionados
         When seleciono todos os extras
         Then tento excluir usando Delete Selected

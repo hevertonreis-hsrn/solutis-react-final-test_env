@@ -54,6 +54,10 @@ class HotelExtrasHomePO{
         cy.get(HotelExtras.excluirSelecionados()).click({ force: true })
         cy.wait(1000)
     }
+
+    verificarExcluirTodos(){
+        cy.get(HotelExtras.verificarExcluirTodos()).should('not.exist')
+    }
     
 }
 

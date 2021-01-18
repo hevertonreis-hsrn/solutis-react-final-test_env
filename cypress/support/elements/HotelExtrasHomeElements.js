@@ -19,6 +19,7 @@ class HotelExtrasHomeElements{
     excluir = () => { return '#root > div.container.mt-5 > div > div.card-body > div > div > table > tbody > tr:nth-child(6) > td.modify-buttons > div > button'}
     selecionarTodos = () => { return '#selectAll'}
     excluirSelecionados = () => { return '#root > div.container.mt-5 > div > div.card-body > div > div > div.border.border-muted.rounded.d-flex.justify-content-between.mb-4.bg-light.p-3 > button'}
+    verificarExcluirTodos = () => { return '#root > div.container.mt-5 > div > div.card-body > div > div > table > tbody > tr:nth-child(1)'}
 }
 
 export default HotelExtrasHomeElements
