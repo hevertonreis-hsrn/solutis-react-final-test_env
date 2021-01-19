@@ -8,7 +8,6 @@ Feature: Hotel Extras Home Page
         Given o acesso ao sistema
         And o acesso à "Hotel extra"
 
-    @focus
     #RN01: É possível usar a funcionalidade Traduzir Extra
     Scenario Outline: Traduzir o nome de um extra
         And acesso a tradução de um extra
@@ -20,7 +19,6 @@ Feature: Hotel Extras Home Page
             | vietnamita          | espanhol   | alemao      |
             | khách sạn Hoàng Gia | Hotel real | Royal Hotel |
 
-    
     #RN02: É possível usar a funcionalidade Visualizar Extra
     Scenario: Visualizar um extra
         When acesso a visualização do extra

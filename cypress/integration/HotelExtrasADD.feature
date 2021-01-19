@@ -8,6 +8,7 @@ Feature: Adicionar Extras em hoteis
         Given o acesso ao sistema
         And o acesso à "Hotel extra"
 
+    @focus
     #RN01: É possível usar a funcionalidade Criar Extra
     Scenario Outline: Criar um Extra
         And acesso a pagina de criação de extras
