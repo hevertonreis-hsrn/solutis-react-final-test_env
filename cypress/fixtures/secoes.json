@@ -1,7 +1,7 @@
 {
     "Hotels": "/hotels", 
     "Hotel rooms": "/hotels/rooms",
-    "Hotel extra": "/hotels/extra",
+    "Hotel extra": "/hotels/extras",
     "Hotel review": "/hotels/reviews",
     "Flights": "/flights/routes",
     "Airports": "/flights/airports",
