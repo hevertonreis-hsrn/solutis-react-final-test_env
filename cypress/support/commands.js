@@ -25,6 +25,7 @@ Cypress.Commands.add('typeCheck', (sel, input) => {
         .clear()
     }else{
         cy.get(sel)
+        .clear()
         .type(input)
     }
 })
